@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-<!-- 	-------- TO-DO: ADD META TAG AND NAME HERE -------- -->
+	<meta name="author" content="Bradley Larkin">
 	<title>Form Activity Solution File</title>
-<!-- 	-------- TO-DO: ADD LINK TO CSS HERE -------- -->
+	<link href="styles.css" rel="stylesheet">
 </head>
 <body>
 	<a href="#main-content" id="skipLink">Skip to main content</a>
@@ -27,6 +27,86 @@
 			<p>Today we'll be focusing on coding a form that is accessible and semantic, and we'll also briefly discuss skip links for your website. Forms can be a source of frustration for users, whether they specifically need help with accessing your website or if they just prefer that your forms be easy to use and submit. Follow along as we code this in class, and please ask questions as they arise. Let's make a form!</p>
 
 <!-- 	-------- TO-DO: ADD FORM CODE HERE DURING CLASS, FOLLOW ALONG TO COMPLETE -------- -->
+			<form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+				
+				<label for="this-name">Full Name<span class="required" >*</span></label>
+				<input type="text" name="this-name" id="this-name" pattern="^([\D]{2,30}\s+)+([a-zA-Z]{2,30})$" placeholder="First Last" required>
+
+				<label for="this-email">Email Address<span class="required" >*</span></label>
+				<input type="email" name="this-email" id="this_email" placeholder="someone@something.com" required>
+
+				<label for="this-phone">Phone Number ### - ### - ####<span class="required" >*</span></label>
+				<input type="tel" name="this-phone" id="this_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+
+				<fieldset>
+					<legend>Preferred method of contact<span class="required" >*</span></legend>
+
+					<input type="radio" name="pref-contact" id="pref-email" required>
+					<label for="pref-email">Email</label>
+
+					<input type="radio" name="pref-contact" id="pref-phone">
+					<label for="pref-phone">Phone</label>
+				</fieldset>
+
+				<select name="this-state" id="this-state" required>
+					<option value="">State of residence<span class="required" >*</span></option>
+					<option value="Alabama">Alabama</option>
+					<option value="Alaska">Alaska</option>
+					<option value="Arizona">Arizona</option>
+					<option value="Arkansas">Arkansas</option>
+					<option value="California">California</option>
+					<option value="Colorado">Colorado</option>
+					<option value="Connecticut">CT</option>
+					<option value="Delaware">Delaware</option>
+					<option value="Florida">Florida</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Hawaii">Hawaii</option>
+					<option value="Idaho">Idaho</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kansas">Kansas</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Louisiana">Louisiana</option>
+					<option value="Maine">Maine</option>
+					<option value="Maryland">Maryland</option>
+					<option value="Massachusetts">Massachusetts</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Minnesota">Minnesota</option>
+					<option value="Mississippi">Mississippi</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Montana">Montana</option>
+					<option value="Nebraska">Nebraska</option>
+					<option value="Nevada">Nevada</option>
+					<option value="New Hampshire">New Hampshire</option>
+					<option value="New Jersey">New Jersey</option>
+					<option value="New Mexico">New Mexico</option>
+					<option value="New York">New York</option>
+					<option value="North Carolina">North Carolina</option>
+					<option value="North Dakota">North Dakota</option>
+					<option value="Ohio">Ohio</option>
+					<option value="Oklahoma">Oklahoma</option>
+					<option value="Oregon">Oregon</option>
+					<option value="Pennsylvania">Pennsylvania</option>
+					<option value="Rhode Island">Rhode Island</option>
+					<option value="South Carolina">South Carolina</option>
+					<option value="South Dakota">South Dakota</option>
+					<option value="Tennessee">Tennessee</option>
+					<option value="Texas">Texas</option>
+					<option value="Utah">Utah</option>
+					<option value="Vermont">Vermont</option>
+					<option value="Virginia">Virginia</option>
+					<option value="Washington">Washington</option>
+					<option value="West Virginia">West Virginia</option>
+					<option value="Wisconsin">Wisconsin</option>
+					<option value="Wyoming">Wyoming</option>
+				</select>
+
+				<label for="this-comments">Any Comments?</label>
+				<textarea name="this-comments" id="this-comments" placeholder="We would love to hear your feedback"></textarea>
+
+				<input type="submit" name="my-submit" id="my-submit" value="Submit Form">
+			</form>
 		</article>
 	</main>
 	<footer>
